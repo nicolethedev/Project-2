@@ -1,0 +1,6 @@
+.blog {
+  display: grid;
+  grid-template-columns: 2, 1fr;
+}
+
+/*# sourceMappingURL=styles.css.map */

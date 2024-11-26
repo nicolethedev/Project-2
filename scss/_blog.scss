@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.blog {
+    @extend %grid;
+}
+
+.blog-card {
+    width: 100px;
+}
+
+.blog-card img {
+    width: 100px;
+}
