@@ -1,6 +1,35 @@
 .blog {
   display: grid;
-  grid-template-columns: 2, 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 240px;
+  justify-content: center;
+  align-items: top;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.blog-card {
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.blog-card img {
+  width: 100%;
+}
+
+.title {
+  color: #E10F2B;
+}
+
+.blog-title {
+  color: #E10F2B;
+}
+
+body {
+  background-color: #FBF6EE;
 }
 
 /*# sourceMappingURL=styles.css.map */
