@@ -1,5 +1,8 @@
 @use 'blog';
+@use 'variables';
+@use 'services';
 
 body {
     background-color: #FBF6EE;
+    font-family: 'Poppins', sans-serif;
 }

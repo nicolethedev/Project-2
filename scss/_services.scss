@@ -1,0 +1,13 @@
+@use 'variables';
+
+hr {
+    border: none;
+    height: 0.8px;
+    opacity: 30%;
+    background-color: variables.$color-1;
+    width: 1200px;
+}
+
+.services {
+    padding-top: 30px;
+}

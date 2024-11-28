@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use 'variables';
 
 .blog {
     display: grid; 
@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: top;
     margin: 0 auto;
-    padding: 10px;
+    padding: 10px 10px 170px 10px;
     width: 100%;
     max-width: 1300px;
 }
@@ -23,9 +23,12 @@
 }
 
 .title {
-    color: #E10F2B;
+   color: variables.$color-1;
+   font-size: variables.$font-size-1;
+   font-weight: variables.$font-weight-1;
 }
 
 .blog-title {
-    color: #E10F2B;
+    color: variables.$color-1;
+    font-weight: variables.$font-weight-1;
 }

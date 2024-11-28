@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: top;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 10px 170px 10px;
   width: 100%;
   max-width: 1300px;
 }
@@ -21,15 +21,31 @@
 }
 
 .title {
-  color: #E10F2B;
+  color: rgb(225, 14, 43);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .blog-title {
-  color: #E10F2B;
+  color: rgb(225, 14, 43);
+  font-weight: 400;
+}
+
+hr {
+  border: none;
+  height: 0.8px;
+  opacity: 30%;
+  background-color: rgb(225, 14, 43);
+  width: 1200px;
+}
+
+.services {
+  padding-top: 30px;
 }
 
 body {
   background-color: #FBF6EE;
+  font-family: "Poppins", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
