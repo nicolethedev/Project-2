@@ -10,4 +10,87 @@ hr {
 
 .services {
     padding-top: 30px;
+    display: flex;
+    align-content: start;
+}
+
+.services-title {
+    width: 700px;
+    padding-left: 100px;
+    font-size: variables.$font-size-2;
+    font-weight: variables.$font-weight-1;
+    color: variables.$color-1;
+}
+
+.services-right {
+    width: 500px;
+}
+
+.services-description {
+    font-size: variables.$font-size-3;
+    color: variables.$color-1;
+    padding-bottom: 40px;
+}
+
+.service-one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.service-two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.service-three {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.small-number {
+    padding-right: 20px;
+    color: variables.$color-1;
+}
+
+.service-type {
+    font-weight: variables.$font-weight-1;
+    color: variables.$color-1;
+}
+
+.view-services {
+    color: variables.$color-1;
+}
+
+.services-link {
+    display: flex;
+    align-items: center;
+    padding-bottom: 160px;
+}
+
+.services-link a {
+    padding-right: 7px;
+    text-decoration: none;
+    display: inline-block; 
+    border-bottom: 2px solid variables.$color-1; 
+    line-height: 0.2; 
+    margin-bottom: -1px;
+}
+
+.services-link .bullet-point {
+    color: variables.$color-1;
+    font-size: variables.$font-size-4;
+}
+
+.services-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-image img {
+    width: 1300px;
 }
