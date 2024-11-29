@@ -3,11 +3,11 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 240px;
   justify-content: center;
-  align-items: top;
+  align-items: center;
   margin: 0 auto;
-  padding: 10px 10px 170px 10px;
+  padding: 10px 10px 170px 60px;
   width: 100%;
-  max-width: 1300px;
+  max-width: 100%;
 }
 
 .blog-card {
@@ -31,6 +31,18 @@
   font-weight: 400;
 }
 
+@media screen and (min-width: 320px) {
+  .blog {
+    max-width: 100%;
+    align-items: start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .blog {
+    max-width: 1300px;
+    padding: 10px 10px 170px 10px;
+  }
+}
 hr {
   border: none;
   height: 0.8px;
