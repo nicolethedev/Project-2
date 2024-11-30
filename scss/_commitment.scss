@@ -84,16 +84,12 @@
     border-bottom: 2px solid variables.$color-1; 
     line-height: 0.2; 
     margin-bottom: -1px;
-    font-weight: variables.$font-weight-1;
+    font-weight: 100;
 }
 
 .bullet-point {
     font-size: variables.$font-size-4;
     color: variables.$color-1;
-}
-
-@media screen and (max-width: 768px){
-    
 }
 
 
