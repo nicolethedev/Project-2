@@ -1,7 +1,33 @@
-$color-1: rgb(225, 14, 43);
-$font-weight-1: 400; 
+
+//Colors:
+$color-1: #e10e2b;
+
+//Fonts:
+$font-weight-1: 400;
+//Font of tiny texts:
 $font-size-1: 14px;
 $font-size-2: 49px;
 $font-size-3: 18px;
 $font-size-4: 28px;
 $font-size-5: 19px;
+
+//Screen sizes:
+$desktop:1120px;
+$tablet:976px;
+
+//Paddings for logo and dark-mood:
+$padding-1:1.5rem;   //For desktop.
+$padding-2:1.875rem;    //For tablet. 
+
+//minmax:
+%flex-nowrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@mixin flex-layout(){
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
