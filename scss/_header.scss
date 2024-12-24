@@ -12,7 +12,8 @@ header{
         position: fixed;
         top: 0;
         left: 0;
-        padding:$padding-1;
+        padding:$padding-2;
+        z-index: 40;
 
         img{
             width: 20px;
@@ -25,6 +26,7 @@ header{
         right: 0;
         padding: $padding-1;
         fill: $color-1;
+        z-index: 40;
 
         svg{
             width: 20px;
@@ -37,8 +39,11 @@ header{
     .navBar{
         @extend %flex-nowrap;
         display: none;  //Hidden by defualt
+        z-index: 40;
+
         a{
             font-weight: $font-size-1;
+            text-decoration: none;
             color: $color-1;
             @extend %flex-nowrap;           
             margin: 0 2rem;
@@ -64,7 +69,7 @@ header{
     @media (min-width:$tablet){
 
         img{
-            width: 27px;
+            width: 28px;
         }
         .logo{
             padding: $padding-2;
@@ -89,8 +94,6 @@ header{
             display: flex;
         }
     }
-    
-    // margin: 0 0 0 20rem;
-    
+        
 }
 
