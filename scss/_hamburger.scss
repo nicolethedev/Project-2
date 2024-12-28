@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+header{
+    .hamburger{
+        display: block;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        z-index: 40;
+        position: fixed;
+        top: 0;
+        right: 0;
+        
+        .hamburger-content {
+            @include flex-layout;
+            justify-content: space-between;
+            padding: 22px;
+            color: $color-1;        
+            .text{
+                font-size: $font-size-1;
+                text-transform: uppercase;
+            }
+            svg{
+                width: 48px;
+            }
+        }
+        @media (min-width:$tablet){
+        }
+        
+        @media (min-width:$desktop){
+            display: none;
+        }
+    }
+}

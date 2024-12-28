@@ -1,9 +1,29 @@
+@use 'variables' as *;
 @use 'blog';
-@use 'variables';
 @use 'services';
 @use 'commitment';
+@use 'header';
+@use 'banner';
+@use 'hamburger';
+
+*{
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #FBF6EE;
-    font-family: 'Poppins', sans-serif;
+    background-color: $light-bg-color;
+    font-family: $font-family;
+    //font color is added here for dark/light mood icon to be able to work. In some files the color is overwriting , which needs to be removed.
+    color:$color-1;
+    width: 100vw;
+    //padding for the whole page
+    padding-left: $padding-1;
+    padding-right: $padding-1;
+
+    max-width: 120rem;
+    margin: 0;
+    svg{
+        fill: $color-1;
+    }
+
 }

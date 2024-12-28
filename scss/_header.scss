@@ -1,0 +1,101 @@
+@use 'variables' as *;
+
+header{
+    width: 100vw;
+    @include flex-layout;
+    position: relative;
+    padding: $padding-1;
+    margin: 0;
+
+    
+    .logo{
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding:$padding-2;
+        z-index: 40;
+
+        img{
+            width: 20px;
+            height: auto;
+        }
+    }
+    .dark-mood{
+        border: none;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: $padding-1;
+        z-index: 40;
+        
+        svg{
+            width: 20px;
+            height: 20px;
+            // fill: $color-1;
+        }
+        //When the sceen size is smaller than desktop, dark-mood will be hidden.
+        display: none;
+    }
+
+    .navBar{
+        @extend %flex-nowrap;
+        display: none;  //Hidden by defualt
+        z-index: 40;
+
+        a{
+            font-weight: $font-size-1;
+            text-decoration: none;
+            color: $color-1;
+            @extend %flex-nowrap;           
+            margin: 0 2rem;
+            position: relative;
+            //:after pseudo-element here is for having the underline with a smooth transition.
+            &:after{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: $color-1;
+                transition: width 0.2s linear;
+            }
+            &:hover:after{
+                width: 100%;
+            }
+        }
+        //When the sceen size is smaller than desktop, navBar will be hidden.
+        display: none;
+    }
+    @media (min-width:$tablet){
+
+        img{
+            width: 28px;
+        }
+        .logo{
+            padding: $padding-2;
+        }
+    
+    } 
+    
+    @media(min-width:$desktop){
+
+        img{
+            width: 20px;
+        }
+        .logo{
+            padding: $padding-1;
+        }
+        //For desktop, dark-mode and navBar will be visable.
+        .dark-mood{
+            display: block;
+        }
+        
+        .navBar{
+            display: flex;
+        }
+    }
+        
+}
+

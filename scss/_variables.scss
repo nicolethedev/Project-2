@@ -1,7 +1,54 @@
-$color-1: rgb(225, 14, 43);
-$font-weight-1: 400; 
-$font-size-1: 14px;
+//Colors for fonts:
+$color-1: #e10e2b;
+$color-2:#f93756;
+$dark-color:#fbf6ee;  //font color for dark mood
+
+//Fonts:
+$main-font: 'Poppins', sans-serif;
+$font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+//Background color in light and dark mood
+$light-bg-color:#FBF6EE;
+$dark-bg-color:#1b1b2c;
+
+//Font weights:
+$font-weight-1: 400;
+$font-weight-2:normal;
+
+
+
+
+//Font sizes:
+$font-size-1: 14px;    //Font of tiny texts:
 $font-size-2: 49px;
 $font-size-3: 18px;
 $font-size-4: 28px;
 $font-size-5: 19px;
+$font-size-banner-1: 44px;
+$font-size-banner-2: 40px;
+
+//Line heights:
+$line-height-1: 1.25rem;
+$line-h-banner-1: 3.25rem;
+$line-h-banner-2: 2.5rem;
+
+//Screen sizes:
+$desktop: 1120px;
+$tablet: 976px;
+
+//Paddings 
+$padding-1: 1.5rem;   //For logo in desktop.
+$padding-2: 1.875rem;    //For logo in tablet.
+
+//Created one placeholder 
+%flex-nowrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+//Created one minmax:
+@mixin flex-layout(){
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
