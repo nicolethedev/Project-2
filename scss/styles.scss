@@ -13,6 +13,8 @@
 body {
     background-color: $light-bg-color;
     font-family: $font-family;
+    //font color is added here for dark/light mood icon to be able to work. In some files the color is overwriting , which needs to be removed.
+    color:$color-1;
     width: 100vw;
     //padding for the whole page
     padding-left: $padding-1;
@@ -20,5 +22,8 @@ body {
 
     max-width: 120rem;
     margin: 0;
+    svg{
+        fill: $color-1;
+    }
 
 }
