@@ -2,7 +2,6 @@
 
 .banner{
     width: 100%;
-    color: $color-1;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -23,9 +22,6 @@
             font-size: $font-size-banner-1;
             line-height: $line-h-banner-1;
             font-weight: $font-weight-2;
-            color: $color-2;
-            // letter-spacing: -.0275rem;
-
         }
     }
     .highlighted{
@@ -39,7 +35,6 @@
         width: 100%;
 
         .highlighted-image-background{
-            // position: relative;
             img{
                 width: 100%;
                 display: block;
@@ -54,12 +49,12 @@
             z-index: 4;  
         }
     }
-    .title{
+    .banner-title{
         font-size: $font-size-1;
         font-weight: $font-weight-1;
         line-height: $line-height-1;
     }
-    .highlighted-title{
+    .banner-highlighted-title{
         line-height: $line-h-banner-2;
         font-size: $font-size-4;
         font-weight: $font-weight-2;
@@ -67,15 +62,20 @@
         margin-bottom: 140px;
         max-width: 1100px;
     }
-
+    @media (min-width:$tablet){
+        .text-2{
+            font-size: clamp(2.75rem, -8.0726rem + 17.7419vw, 5.5rem);
+            font-weight: 300;
+        }
+    }
     @media (min-width:$desktop){
         .banner-text{
             display: grid;
-        grid-template-columns:19.5rem auto;
-        gap: 0.5rem;
-        .text-1{
-            display: block;
-        }
+            grid-template-columns:19.5rem auto;
+            gap: 0.5rem;
+            .text-1{
+                display: block;
+            }
         }
 
     }
