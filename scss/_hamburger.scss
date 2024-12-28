@@ -16,16 +16,13 @@ header{
             @include flex-layout;
             justify-content: space-between;
             padding: 22px;
-            
-        
+            color: $color-1;        
             .text{
                 font-size: $font-size-1;
-                color: $color-1;
                 text-transform: uppercase;
             }
             svg{
                 width: 48px;
-                fill: $color-1;
             }
         }
         @media (min-width:$tablet){
