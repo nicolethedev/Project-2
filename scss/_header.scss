@@ -21,16 +21,18 @@ header{
         }
     }
     .dark-mood{
+        border: none;
+        background-color: transparent;
         position: fixed;
         top: 0;
         right: 0;
         padding: $padding-1;
-        fill: $color-1;
         z-index: 40;
-
+        
         svg{
             width: 20px;
             height: 20px;
+            // fill: $color-1;
         }
         //When the sceen size is smaller than desktop, dark-mood will be hidden.
         display: none;
