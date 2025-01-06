@@ -119,9 +119,11 @@ hr {
 }
 
 .services-link a {
+  color: #e10e2b;
   padding-right: 7px;
   text-decoration: none;
   display: inline-block;
+  border-bottom: 2px solid #e10e2b;
   line-height: 0.2;
   margin-bottom: -1px;
   font-weight: 100;
@@ -275,8 +277,10 @@ hr {
 
 .get-in-touch-link {
   padding-right: 7px;
+  color: #e10e2b;
   text-decoration: none;
   display: inline-block;
+  border-bottom: 2px solid #e10e2b;
   line-height: 0.2;
   margin-bottom: -1px;
   font-weight: 100;
@@ -329,7 +333,6 @@ header {
   padding: 1.5rem;
   margin: 0;
 }
-
 header .logo {
   position: fixed;
   top: 0;
@@ -337,12 +340,10 @@ header .logo {
   padding: 1.875rem;
   z-index: 40;
 }
-
 header .logo img {
   width: 20px;
   height: auto;
 }
-
 header .dark-mood {
   border: none;
   background-color: transparent;
@@ -353,18 +354,15 @@ header .dark-mood {
   z-index: 40;
   display: none;
 }
-
 header .dark-mood svg {
   width: 20px;
   height: 20px;
 }
-
 header .navBar {
   display: none;
   z-index: 40;
   display: none;
 }
-
 header .navBar a {
   font-weight: 14px;
   text-decoration: none;
@@ -372,7 +370,6 @@ header .navBar a {
   margin: 0 2rem;
   position: relative;
 }
-
 header .navBar a:after {
   content: "";
   position: absolute;
@@ -383,11 +380,9 @@ header .navBar a:after {
   background-color: #e10e2b;
   transition: width 0.2s linear;
 }
-
 header .navBar a:hover:after {
   width: 100%;
 }
-
 @media (min-width: 976px) {
   header img {
     width: 28px;
@@ -410,6 +405,7 @@ header .navBar a:hover:after {
     display: flex;
   }
 }
+
 .banner {
   width: 100%;
   display: flex;
@@ -418,7 +414,6 @@ header .navBar a:hover:after {
   margin-top: 5.5rem;
   overflow: hidden;
 }
-
 .banner .banner-text .text-1 {
   display: none;
   margin: 0;
@@ -426,31 +421,26 @@ header .navBar a:hover:after {
   font-weight: 400;
   line-height: 1.25rem;
 }
-
 .banner .banner-text .text-2 {
   margin: 0;
   font-size: 44px;
   line-height: 3.25rem;
   font-weight: normal;
 }
-
 .banner .highlighted {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.25rem;
   text-transform: uppercase;
 }
-
 .banner .image-container {
   position: relative;
   width: 100%;
 }
-
 .banner .image-container .highlighted-image-background img {
   width: 100%;
   display: block;
 }
-
 .banner .image-container .highlighted-image-foreground {
   position: absolute;
   width: 15%;
@@ -459,13 +449,11 @@ header .navBar a:hover:after {
   transform: translate(-50%, -50%);
   z-index: 4;
 }
-
 .banner .banner-title {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.25rem;
 }
-
 .banner .banner-highlighted-title {
   line-height: 2.5rem;
   font-size: 28px;
@@ -474,7 +462,6 @@ header .navBar a:hover:after {
   margin-bottom: 140px;
   max-width: 1100px;
 }
-
 @media (min-width: 976px) {
   .banner .text-2 {
     font-size: clamp(2.75rem, -8.0726rem + 17.7419vw, 5.5rem);
@@ -491,6 +478,7 @@ header .navBar a:hover:after {
     display: block;
   }
 }
+
 header .hamburger {
   display: block;
   background-color: transparent;
@@ -502,7 +490,6 @@ header .hamburger {
   top: 0;
   right: 0;
 }
-
 header .hamburger .hamburger-content {
   display: flex;
   flex-wrap: nowrap;
@@ -512,21 +499,19 @@ header .hamburger .hamburger-content {
   padding: 22px;
   color: #e10e2b;
 }
-
 header .hamburger .hamburger-content .text {
   font-size: 14px;
   text-transform: uppercase;
 }
-
 header .hamburger .hamburger-content svg {
   width: 48px;
 }
-
 @media (min-width: 1120px) {
   header .hamburger {
     display: none;
   }
 }
+
 .red-bg {
   border: none;
   font-family: Poppins, sans-serif;
@@ -538,7 +523,6 @@ header .hamburger .hamburger-content svg {
 .awards-image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -593,9 +577,11 @@ body {
   max-width: 120rem;
   margin: 0;
 }
-
 body svg {
   fill: #e10e2b;
-} 
+}
+body a, body a:hover, body a:visited {
+  color: #e10e2b;
+}
 
 /*# sourceMappingURL=styles.css.map */
