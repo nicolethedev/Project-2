@@ -25,5 +25,7 @@ body {
     svg{
         fill: $color-1;
     }
-
+    a, a:hover, a:visited{
+        color: $color-1;
+    }
 }
