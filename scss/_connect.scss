@@ -1,0 +1,30 @@
+@use 'variables';
+
+$red-bg-color: #F93756;
+$text-color: #FBF6EE;
+
+.red-bg {
+    border: none;
+    font-family: Poppins, sans-serif;
+    background-color: $red-bg-color;
+    width: 100%;
+    height: 100%;
+}
+
+.connect table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: .5px solid $text-color;
+}
+
+.connect table tr, 
+.connect table td {
+    border-top: .5px solid $text-color;
+    border-spacing: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.connect img {
+    align-items: right;
+}

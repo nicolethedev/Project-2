@@ -1,0 +1,55 @@
+@use 'variables';
+
+$red-bg-color: #F93756;
+$text-color: #FBF6EE;
+
+.red-bg {
+    border: none;
+    font-family: Poppins, sans-serif;
+    background-color: $red-bg-color;
+    width: 100%;
+    height: 100%;
+}
+
+.awards-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.awards-title, tr, td, .connect-title {
+    color: $text-color;
+}
+
+.awards-title, .connect-title {
+    line-height: 3.5rem;
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.awards table tr, 
+.awards table td {
+    border-top: .5px solid $text-color;
+    border-spacing: 0;
+    padding-top: .75rem;
+    padding-bottom: 3rem;
+}
+
+.awards table td:first-child {
+    font-size: .875rem;
+}
+
+.awards table td:nth-child(2) {
+    font-size: 1.25rem;
+}
+
+.awards table td:last-child {
+    font-weight: 800;
+    font-size: 1.5625rem;
+}
