@@ -252,6 +252,7 @@ hr {
   opacity: 0.25;
   z-index: -1;
   background-color: transparent;
+  border: 2px solid;
 }
 
 .commit-title {
