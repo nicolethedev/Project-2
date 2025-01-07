@@ -8,6 +8,7 @@ const viewService=document.querySelector('.view-services');
 const viewServiceLine=document.querySelector('.services-link a');
 const serviceBullet=document.querySelectorAll('.bullet-point');
 const getInTouch=document.querySelector('.get-in-touch-link');
+const hrElements=document.querySelectorAll('hr');
 
 // console.log('HERE!');
 
@@ -17,6 +18,8 @@ const darkBg='#1b1b2c';
 const lightFont='#e10e2b';
 const lightBg='#FBF6EE';
 const bulletC='#252541';
+const darkHr = darkFont;
+const lightHr = lightFont;
 let mood='light';
 
 //Function:
@@ -40,7 +43,8 @@ function changeMood(){
         getInTouch.style.setProperty('color',darkFont,'important');
         getInTouch.style.setProperty('border-bottom-color',darkFont,'important');
         serviceBullet.forEach(bullet => { bullet.style.setProperty('color', bulletC, 'important'); });
-
+        hrElements.forEach(hr => hr.style.setProperty('background-color', darkHr, 'important')); 
+        
         mood = 'dark'; 
         console.log('mood is: ', mood);
     }else{
@@ -57,6 +61,7 @@ function changeMood(){
         getInTouch.style.setProperty('color',lightFont,'important');
         getInTouch.style.setProperty('border-bottom-color',lightFont,'important');
         serviceBullet.forEach(bullet => { bullet.style.setProperty('color', lightFont, 'important'); });
+        hrElements.forEach(hr => hr.style.setProperty('background-color', lightHr, 'important'));
 
         mood = 'light'; 
         console.log('mood is: ', mood); }
