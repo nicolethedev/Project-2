@@ -71,7 +71,7 @@ hr {
 
 .services-right {
   width: 500px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .services-description {
@@ -138,14 +138,16 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 0px 0px 40px 40px;
-  width: 320px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .services-image img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 320px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .line-1,
@@ -166,6 +168,16 @@ hr {
     padding: 0px;
     width: 1200px;
   }
+  .services-image {
+    width: 100%;
+    padding: 0px;
+    max-width: 100%;
+  }
+  .services-image img {
+    width: 100%;
+    height: auto;
+    max-width: 750px;
+  }
 }
 @media screen and (min-width: 768px) {
   .services {
@@ -182,20 +194,20 @@ hr {
     width: 100%;
   }
   .services-image {
-    width: 1300px;
+    width: 100%;
   }
   .services-image img {
-    width: 1300px;
+    max-width: 1300px;
     padding-top: 40px;
   }
   .services-description {
     font-size: 19px;
     width: 550px;
-    padding-left: 0px;
+    padding-left: 20px;
     text-align: left;
   }
   .services-title {
-    padding-left: 50px;
+    padding-left: 10px;
   }
   .services-link {
     padding-bottom: 160px;
