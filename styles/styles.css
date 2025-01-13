@@ -587,7 +587,7 @@ body {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #e10e2b;
   width: 100vw;
-  padding-left: 1.5rem;
+  padding-left: padding-1;
   padding-right: 1.5rem;
   max-width: 120rem;
   margin: 0;
