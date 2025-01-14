@@ -30,3 +30,58 @@ body {
         color: $color-1;
     }
 }
+
+.red-bg {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+
+
+footer {
+    background-color: #F93756;
+    padding: 2rem;
+    color: #fff;
+
+    a {
+        color: #fff;
+    }
+
+    table a {
+        font-size: $font-size-3;
+        font-weight: 500;
+    }
+
+    .left-text {
+        font-size: 3.5rem;
+        width: 50%;
+    }
+
+    .left-text h2, .left-text a {
+        font-weight: 300;
+        line-height: 1.1;
+        text-decoration-thickness: .2rem;
+    }
+
+    .right-text {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .right-text a {
+        text-decoration: none;
+    }
+
+    .copy-right {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    .arrow {
+        fill: #fff;
+        stroke: #fff;
+    }
+}
+

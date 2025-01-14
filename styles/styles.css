@@ -599,4 +599,48 @@ body a, body a:hover, body a:visited {
   color: #e10e2b;
 }
 
+.red-bg {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+footer {
+  background-color: #F93756;
+  padding: 2rem;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+footer table a {
+  font-size: 18px;
+  font-weight: 500;
+}
+footer .left-text {
+  font-size: 3.5rem;
+  width: 50%;
+}
+footer .left-text h2, footer .left-text a {
+  font-weight: 300;
+  line-height: 1.1;
+  text-decoration-thickness: 0.2rem;
+}
+footer .right-text {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .right-text a {
+  text-decoration: none;
+}
+footer .copy-right {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+footer .arrow {
+  fill: #fff;
+  stroke: #fff;
+}
+
 /*# sourceMappingURL=styles.css.map */
