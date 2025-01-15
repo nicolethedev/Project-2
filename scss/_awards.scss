@@ -1,20 +1,25 @@
-@use 'variables';
+@use 'variables' as *;
 
-$red-bg-color: #F93756;
-$text-color: #FBF6EE;
-
-.red-bg {
+.awards{
+    display: flex;
+    flex-direction: column;
     border: none;
     font-family: Poppins, sans-serif;
     background-color: $red-bg-color;
     width: 100%;
     height: 100%;
+    padding: 4rem 4rem 2rem 4rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    max-width: 125rem;
 }
 
 .awards-image {
+    max-width: 96.875rem;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 .awards-title, tr, td, .connect-title {

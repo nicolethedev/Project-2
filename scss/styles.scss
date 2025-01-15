@@ -1,87 +1,52 @@
-@use 'variables' as *;
-@use 'blog';
-@use 'services';
-@use 'commitment';
-@use 'header';
-@use 'banner';
-@use 'hamburger';
-@use 'awards';
+@use "variables" as *;
+@use "blog";
+@use "services";
+@use "commitment";
+@use "header";
+@use "banner";
+@use "hamburger";
+@use "awards";
+@use "footer";
+@use "connect";
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
-    background-color: $light-bg-color;
-    font-family: $font-family;
-    //font color is added here for dark/light mood icon to be able to work. In some files the color is overwriting , which needs to be removed.
-    color:$color-1;
-    width: 100vw;
-    //padding for the whole page
-    padding-left: $padding-1;
-    padding-right: $padding-1;
+  background-color: $light-bg-color;
+  font-family: $main-font;
+  //font color is added here for dark/light mood icon to be able to work. In some files the color is overwriting , which needs to be removed.
+  color: $color-1;
+  width: 100vw;
+  //padding for the whole page
+  padding-left: $padding-1;
+  padding-right: $padding-1;
+  max-width: 120rem;
+  margin: 0;
+  svg {
+    fill: $color-1;
+  }
+  a,
+  a:hover,
+  a:visited {
+    color: $color-1;
+  }
+}
 
-    max-width: 120rem;
-    margin: 0;
-    svg{
-        fill: $color-1;
-    }
-    a, a:hover, a:visited{
-        color: $color-1;
-    }
+main {
+  // padding-left: $padding-1;
+  // padding-right: $padding-1;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  border-collapse: collapse;
+  padding: 2rem 4rem;
 }
 
 .red-bg {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+  background-color: $red-bg-color;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 20px 50px;
 }
-
-
-
-footer {
-    background-color: #F93756;
-    padding: 2rem;
-    color: #fff;
-
-    a {
-        color: #fff;
-    }
-
-    table a {
-        font-size: $font-size-3;
-        font-weight: 500;
-    }
-
-    .left-text {
-        font-size: 3.5rem;
-        width: 50%;
-    }
-
-    .left-text h2, .left-text a {
-        font-weight: 300;
-        line-height: 1.1;
-        text-decoration-thickness: .2rem;
-    }
-
-    .right-text {
-        width: 50%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .right-text a {
-        text-decoration: none;
-    }
-
-    .copy-right {
-        padding-top: 5rem;
-        padding-bottom: 3rem;
-    }
-
-    .arrow {
-        fill: #fff;
-        stroke: #fff;
-    }
-}
-
