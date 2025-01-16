@@ -12,6 +12,10 @@ footer {
     color: #fff;
   }
 
+  footer a:visited {
+    color: #fff;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -73,8 +77,6 @@ footer {
   .arrow {
     fill: #fff;
     stroke: #fff;
-  }
-  footer a:visited {
-    color: #fff;
-  }
+  } 
+
 }

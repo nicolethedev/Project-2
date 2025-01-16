@@ -602,6 +602,9 @@ footer {
 footer footer a {
   color: #fff;
 }
+footer footer a:visited {
+  color: #fff;
+}
 footer table {
   width: 100%;
   border-collapse: collapse;
@@ -653,9 +656,6 @@ footer .copy-right a {
 footer .arrow {
   fill: #fff;
   stroke: #fff;
-}
-footer footer a:visited {
-  color: #fff;
 }
 
 .connect {
@@ -718,8 +718,7 @@ body svg {
   fill: #e10e2b;
 }
 body a,
-body a:hover,
-body a:visited {
+body a:hover {
   color: #e10e2b;
 }
 
