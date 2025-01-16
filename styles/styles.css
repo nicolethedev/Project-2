@@ -376,7 +376,6 @@ header .dark-mood svg {
 header .navBar {
   display: none;
   z-index: 40;
-  display: none;
 }
 header .navBar a {
   font-weight: 14px;
@@ -397,6 +396,9 @@ header .navBar a:after {
 }
 header .navBar a:hover:after {
   width: 100%;
+}
+header .navBar .open {
+  display: block !important;
 }
 @media (min-width: 976px) {
   header img {
