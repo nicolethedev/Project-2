@@ -543,8 +543,6 @@ header .hamburger .hamburger-content svg {
   width: 100%;
   height: 100%;
   padding: 4rem 4rem 2rem 4rem;
-  margin-left: -2rem;
-  margin-right: -2rem;
   max-width: 125rem;
 }
 
@@ -599,8 +597,6 @@ footer {
   font-weight: 300;
   padding: 2rem 4rem;
   color: #fff;
-  margin-left: -2rem;
-  margin-right: -2rem;
   border-collapse: collapse;
 }
 footer footer a {
@@ -664,8 +660,6 @@ footer .arrow {
   font-family: Poppins, sans-serif;
   padding: 1rem 4rem;
   color: #fff;
-  margin-left: -2rem;
-  margin-right: -2rem;
   width: 100%;
   max-width: 125rem;
 }
@@ -714,8 +708,6 @@ body {
   font-family: "Poppins", sans-serif;
   color: #e10e2b;
   width: 100vw;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   max-width: 120rem;
   margin: 0;
 }
@@ -732,7 +724,7 @@ main {
   margin-left: -2rem;
   margin-right: -2rem;
   border-collapse: collapse;
-  padding: 2rem 4rem;
+  padding: 0 4rem;
 }
 
 .red-bg {
@@ -740,7 +732,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  padding: 20px 50px;
+  margin: inherit;
 }
 
 /*# sourceMappingURL=styles.css.map */
