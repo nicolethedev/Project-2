@@ -19,9 +19,6 @@ body {
   //font color is added here for dark/light mood icon to be able to work. In some files the color is overwriting , which needs to be removed.
   color: $color-1;
   width: 100vw;
-  //padding for the whole page
-  padding-left: $padding-1;
-  padding-right: $padding-1;
   max-width: 120rem;
   margin: 0;
   svg {
@@ -35,12 +32,10 @@ body {
 }
 
 main {
-  // padding-left: $padding-1;
-  // padding-right: $padding-1;
   margin-left: -2rem;
   margin-right: -2rem;
   border-collapse: collapse;
-  padding: 2rem 4rem;
+  padding: 0 4rem;
 }
 
 .red-bg {
@@ -48,5 +43,6 @@ main {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  padding: 20px 50px;
+  // padding: 20px 50px;
+  margin: inherit;
 }
