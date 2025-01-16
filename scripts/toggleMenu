@@ -1,4 +1,5 @@
-( function() {
+
+function() {
     const siteHeader = document.getElementById( 'site-header' );
     const siteNavigation = document.getElementById( 'site-navigation' );
     const hamburger = document.getElementById( 'hamburger' );
@@ -64,4 +65,4 @@
             menuItem.classList.toggle( 'focus' );
         }
     }
-}() );
+};
