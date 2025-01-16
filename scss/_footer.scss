@@ -1,8 +1,77 @@
-@use 'variables';
+@use "variables" as *;
 
-$red-bg-color: #F93756;
-$text-color: #FBF6EE;
+footer {
+  background-color: $red-bg-color;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  padding: 2rem 4rem;
+  color: #fff;
+  border-collapse: collapse;
 
-a {
+  footer a {
+    color: #fff;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table a {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  th,
+  td {
+    padding: 4px 10px;
+    text-align: left;
+  }
+
+  tr {
+    padding-right: 10px;
+  }
+
+  .left-text {
+    font-size: 2rem;
+    width: 35%;
+    display: inline-block;
+  }
+
+  .left-text h2,
+  .left-text a {
+    font-weight: 300;
+    line-height: 1.1;
+    text-decoration-thickness: 0.2rem;
+    color: #fff;
+  }
+
+  .right-text {
+    padding-top: 2rem;
+    width: 50%;
+    display: inline-block;
+    padding-left: 4rem;
+    position: relative;
+  }
+
+  .right-text a {
     text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .copy-right {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+
+  .copy-right a {
+    color: #fff;
+  }
+
+  .arrow {
+    fill: #fff;
+    stroke: #fff;
+  }
 }
