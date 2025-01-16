@@ -1,0 +1,67 @@
+( function() {
+    const siteHeader = document.getElementById( 'site-header' );
+    const siteNavigation = document.getElementById( 'site-navigation' );
+    const hamburger = document.getElementById( 'hamburger' );
+    const darkModeToggle = document.getElementById( 'darkModeToggle' );
+    const body = document.body;
+
+    // Return early if the navigation doesn't exist.
+    if ( ! siteNavigation || ! hamburger ) {
+        return;
+    }
+
+    // Toggle the .open class each time the hamburger button is clicked.
+    hamburger.addEventListener( 'click', function() {
+        siteNavigation.classList.toggle( 'open' );
+        console.log('Menu button clicked!'); // Debugging log
+    } );
+
+    // Toggle the .dark-mode class each time the dark mode button is clicked.
+    darkModeToggle.addEventListener( 'click', function() {
+        body.classList.toggle( 'dark-mode' );
+        console.log('Dark mode button clicked!'); // Debugging log
+    } );
+
+    // Remove the .open class when the user clicks outside the navigation.
+    document.addEventListener( 'click', function( event ) {
+        const isClickInside = siteHeader.contains( event.target );
+        if ( ! isClickInside ) {
+            siteNavigation.classList.remove( 'open' );
+        }
+    } );
+
+    // Get all the link elements within the menu.
+    const links = siteNavigation.getElementsByTagName( 'a' );
+
+    // Toggle focus each time a menu link is focused or blurred.
+    for ( const link of links ) {
+        link.addEventListener( 'focus', toggleFocus, true );
+        link.addEventListener( 'blur', toggleFocus, true );
+    }
+
+    /**
+     * Sets or removes .focus class on an element.
+     */
+    function toggleFocus(event) {
+        if ( event.type === 'focus' || event.type === 'blur' ) {
+            let self = this;
+            while ( ! self.classList.contains( 'navBar' ) ) {
+                if ( 'li' === self.tagName.toLowerCase() ) {
+                    self.classList.toggle( 'focus' );
+                }
+                self = self.parentNode;
+            }
+        }
+
+        if ( event.type === 'touchstart' ) {
+            const menuItem = this.parentNode;
+            event.preventDefault();
+            for ( const link of menuItem.parentNode.children ) {
+                if ( menuItem !== link ) {
+                    link.classList.remove( 'focus' );
+                }
+            }
+            menuItem.classList.toggle( 'focus' );
+        }
+    }
+}() );
