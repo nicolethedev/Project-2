@@ -11,14 +11,14 @@
         <link rel="stylesheet" href="scss/styles.css">
     </head>
     <body>
-        <header>
+        <header class="site-header">
             <a arial-label="link to front page" href="index.html">
                 <div class="logo">
                     <img id="logo" src="images/reon-logo.png" alt="Reon Logo">
                 </div> <!-- End of class "logo" -->
             </a>
             
-            <div class="navBar">
+            <div class="navBar" id="site-navigation">
                 <a href="#">Services</a>
                 <a href="#">Industries</a>
                 <a href="#">Work</a>
@@ -43,8 +43,6 @@
                 </svg>
             </button> <!--End of dark-mood class -->
         </header>
-        
-        
         <main>
             <section class="banner">
                 <div class="banner-text">
@@ -86,8 +84,8 @@
                     <img src="images/standby.avif" alt="two people standing in front of a sign that says Standby">
                     <h3 class="title">News</h3>
                     <h2 class="blog-title">Standby Deposits officially live: First certificate issued &#8594;</h2>
-                </section>
-            <hr>
+                </div>
+            </section>
             <section class="services">
                 <h2 class="services-title">End-to-End <br> Consultancy</h2>
                 <div class="services-right">
@@ -106,7 +104,7 @@
                     </div>
                     <div class="services-link"><a href="#"><h2 class="view-services">View our services</h2></a> <span class="bullet-point">&#8226;</span></div>
                 </div>
-            </section>
+            </section>   <!-- End of class="service-right" -->
             <section class="services-image">
                 <img src="images/team-meeting.avif" alt="A team meeting" class="services-image">
             </section>
@@ -137,54 +135,55 @@
                     <span class="bullet-point">&#8226;</span>
                 </div>
             </section>
-        <section class="red-bg">
-            <section class="awards">
-                <img src="images/awards.avif" alt="Awards lined up" class="awards-image">
-                <h2 class="awards-title">Awards and<br> Recognitions</h2>
-                <table>
-                    <tr>
-                        <td>Award</td>
-                        <td>2023 Model Company of the Year</td>
-                        <td>VR</td>
-                    </tr>
-                    <tr>
-                        <td>Nominee</td>
-                        <td>E-commerce product of the year &#8226; 2022 Icelandic web awards</td>
-                        <td>SVEF</td>
-                    </tr>
-                    <tr>
-                        <td>Award</td>
-                        <td>2022 Company of the Year</td>
-                        <td>VR</td>
-                    </tr>
-                    <tr>
-                        <td>Award</td>
-                        <td>2022 Model Company of the Year</td>
-                        <td>VR</td>
-                    </tr>
-                    <tr>
-                        <td>Award</td>
-                        <td>Digital product of the year (retail) &#8226; 2021 Icelandic web awards</td>
-                        <td>SVEF</td>
-                    </tr>
-                </table>
-            </section>
-            <section class="connect">
-                <h2 class="connect-title">Connect with us</h2>
-                <table>
-                    <tr>
-                        <td>Linkedin</td>
-                        <td><img src="icons/arrow-up-right.svg" class="arrow"></td>
-                    </tr>
-                    <tr>
-                        <td>Facebook</td>
-                        <td><img src="icons/arrow-up-right.svg" class="arrow"></td>
-                    </tr>
-                    <tr>
-                        <td>Instagram</td>
-                        <td><img src="icons/arrow-up-right.svg" class="arrow"></td>
-                    </tr>
-                </table>
+            <section class="red-bg">
+                <section class="awards">
+                    <img src="images/awards.avif" alt="Awards lined up" class="awards-image">
+                    <h2 class="awards-title">Awards and<br> Recognitions</h2>
+                    <table>
+                        <tr>
+                            <td>Award</td>
+                            <td>2023 Model Company of the Year</td>
+                            <td>VR</td>
+                        </tr>
+                        <tr>
+                            <td>Nominee</td>
+                            <td>E-commerce product of the year &#8226; 2022 Icelandic web awards</td>
+                            <td>SVEF</td>
+                        </tr>
+                        <tr>
+                            <td>Award</td>
+                            <td>2022 Company of the Year</td>
+                            <td>VR</td>
+                        </tr>
+                        <tr>
+                            <td>Award</td>
+                            <td>2022 Model Company of the Year</td>
+                            <td>VR</td>
+                        </tr>
+                        <tr>
+                            <td>Award</td>
+                            <td>Digital product of the year (retail) &#8226; 2021 Icelandic web awards</td>
+                            <td>SVEF</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="connect">
+                    <h2 class="connect-title">Connect with us</h2>
+                    <table>
+                        <tr>
+                            <td>Linkedin</td>
+                            <td><img src="icons/arrow-up-right.svg" class="arrow"></td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                            <td><img src="icons/arrow-up-right.svg" class="arrow"></td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                            <td><img src="icons/arrow-up-right.svg" class="arrow"></td>
+                        </tr>
+                    </table>
+                </section>
             </section>
         </main>
         <footer>
@@ -219,7 +218,7 @@
             </div>
             <p class="copy-right">&copy; 2024 Reon &#8226; <a href="#">Pastry policy</a> &#8226; <a href="#">"Do we peek at you?" policy</a></p>
         </footer>
-    <script src="scripts/darkMood.js"></script>
-</section>
+        <script src="scripts/darkMood.js"></script>
+        <script src="scripts/toggleMenu"></script>
     </body>
 </html>
