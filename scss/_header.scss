@@ -40,7 +40,7 @@ header{
 
     .navBar{
         @extend %flex-nowrap;
-        display: none;  //Hidden by defualt
+        display: none;  //Hidden by defualt when sceen size is smaller than desktop.
         z-index: 40;
 
         a{
@@ -65,8 +65,10 @@ header{
                 width: 100%;
             }
         }
-        //When the sceen size is smaller than desktop, navBar will be hidden.
-        display: none;
+    }
+
+    .navBar .open{
+        display: block !important;
     }
     @media (min-width:$tablet){
 
