@@ -654,6 +654,9 @@ footer .arrow {
   fill: #fff;
   stroke: #fff;
 }
+footer footer a:visited {
+  color: #fff;
+}
 
 .connect {
   background-color: #F93756;
