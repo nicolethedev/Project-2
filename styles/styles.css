@@ -444,18 +444,20 @@ header .dark-mood svg {
   justify-content: flex-start;
   margin-top: 5.5rem;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 4rem;
 }
 .banner .banner-text .text-1 {
-  display: none;
+  width: 200px;
   margin: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.25rem;
 }
-.banner .banner-text .text-2 {
+.banner .banner-text .text-2 h1 {
   margin: 0;
-  font-size: 44px;
-  line-height: 3.25rem;
+  font-size: 80px;
+  line-height: 1.25rem;
   font-weight: normal;
 }
 .banner .highlighted {
@@ -467,10 +469,15 @@ header .dark-mood svg {
 .banner .image-container {
   position: relative;
   width: 100%;
+  height: auto;
 }
 .banner .image-container .highlighted-image-background img {
+  max-width: 96.875rem;
   width: 100%;
+  height: auto;
+  object-fit: cover;
   display: block;
+  justify-self: center;
 }
 .banner .image-container .highlighted-image-foreground {
   position: absolute;
@@ -544,18 +551,24 @@ header .hamburger .hamburger-content .bar {
   }
 }
 
-.red-bg {
+.awards {
+  display: flex;
+  flex-direction: column;
   border: none;
   font-family: Poppins, sans-serif;
   background-color: #F93756;
   width: 100%;
   height: 100%;
+  padding: 4rem 4rem 2rem 4rem;
+  max-width: 125rem;
 }
 
 .awards-image {
+  max-width: 96.875rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin: 0 auto;
 }
 
 .awards-title, tr, td, .connect-title {
@@ -595,25 +608,150 @@ table {
   font-size: 1.5625rem;
 }
 
+footer {
+  background-color: #F93756;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  padding: 2rem 4rem;
+  color: #fff;
+  border-collapse: collapse;
+}
+footer footer a {
+  color: #fff;
+}
+footer footer a:visited {
+  color: #fff;
+}
+footer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+footer table a {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+footer th,
+footer td {
+  padding: 4px 10px;
+  text-align: left;
+}
+footer tr {
+  padding-right: 10px;
+}
+footer .left-text {
+  font-size: 2rem;
+  width: 35%;
+  display: inline-block;
+}
+footer .left-text h2,
+footer .left-text a {
+  font-weight: 300;
+  line-height: 1.1;
+  text-decoration-thickness: 0.2rem;
+  color: #fff;
+}
+footer .right-text {
+  padding-top: 2rem;
+  width: 50%;
+  display: inline-block;
+  padding-left: 4rem;
+  position: relative;
+}
+footer .right-text a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+footer .copy-right {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  width: 100%;
+}
+footer .copy-right a {
+  color: #fff;
+}
+footer .arrow {
+  fill: #fff;
+  stroke: #fff;
+}
+
+.connect {
+  background-color: #F93756;
+  font-family: Poppins, sans-serif;
+  padding: 1rem 4rem;
+  color: #fff;
+  width: 100%;
+  max-width: 125rem;
+}
+
+.connect table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 0.5px solid #FBF6EE;
+  font-size: 25px;
+}
+
+.connect table tr,
+.connect table td {
+  border-top: 0.5px solid #FBF6EE;
+  border-bottom: 0.5px solid #FBF6EE;
+  border-spacing: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.connect table tr .social, .connect table tr .arrow {
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.connect table tr .social:hover {
+  transform: translateX(75px);
+}
+
+.connect table tr .arrow:hover {
+  transform: translateX(-100px);
+}
+
+.connect .arrow {
+  fill: #fff;
+  stroke: #fff;
+  float: right;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #FBF6EE;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Poppins", sans-serif;
   color: #e10e2b;
   width: 100vw;
-  padding-left: padding-1;
-  padding-right: 1.5rem;
   max-width: 120rem;
   margin: 0;
 }
 body svg {
   fill: #e10e2b;
 }
-body a, body a:hover, body a:visited {
+body a,
+body a:hover {
   color: #e10e2b;
+}
+
+main {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  border-collapse: collapse;
+  padding: 0 4rem;
+}
+
+.red-bg {
+  background-color: #F93756;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: inherit;
 }
 
 /*# sourceMappingURL=styles.css.map */
