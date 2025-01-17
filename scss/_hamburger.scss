@@ -15,22 +15,61 @@ header{
         .hamburger-content {
             @include flex-layout;
             justify-content: space-between;
-            padding: 22px;
+            column-gap:5px;
+            align-items: center;
+            padding: 34px;
             color: $color-1;        
             .text{
                 font-size: $font-size-1;
                 text-transform: uppercase;
             }
-            .bar{
-                width: 48px;
-                // -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
+            // This is setting for svg bar
+            // .bar{
+            //     width: 50px;
+            //     transition: all 0.3s ease-in-out;
+            // }
+            .bars{
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+                justify-content: space-between;
             }
 
-            // svg{
-            //     width: 48px;
-            // }
+            .bar {
+                position: relative; /* Position bars relative to their container */
+                width: 50px; /* Adjust width as needed */
+                height: 1.5px; /* Bar height */
+                background-color: $color-1; /* Bar color */
+                transition: all 0.3s ease-in-out;
+                z-index: 51;
+            }
+            .bar-top {
+                transition: all 0.3s ease-in-out;
+            }
+        
+              /* Styling for the bottom bar when active */
+            .bar-bottom {
+                transition: all 0.3s ease-in-out;
+            }
+        
+            
+            &.active .bar-top {
+                transform: translateY(8px) rotate(45deg);
+                // position: absolute;
+                // top: 0;
+            }
+
+            &.active .bar-bottom {
+                transform: translateY(-8px) rotate(-45deg);
+                // position: absolute;
+                // top: 0;
+            }
+            
+            &.active .text {
+                visibility: hidden; /* Hide text when hamburger is open */
+            }
         }
+
         
         @media (min-width:$desktop){
             display: none;
