@@ -45,15 +45,14 @@ $padding-2: 1.875rem;    //For logo in tablet.
 $padding-3: 4rem;
 
 //Created one placeholder 
-%flex-nowrap{
-    display: flex;
-    flex-wrap: nowrap;
-}
+// %flex-nowrap{
+//     display: flex;
+//     flex-wrap: nowrap;
+// }
 
 //Created one minmax:
 @mixin flex-layout(){
     display:flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    // align-items: center;
 }
