@@ -1,6 +1,6 @@
 console.log("Inside the Toggle Menu file!");
 
-const hamburger = document.querySelector('.hamburger-content');
+const hamburger = document.querySelector('.hamburger');
 const navBarMenu = document.querySelector('.navBar');
 
 hamburger.addEventListener("click", () => {
