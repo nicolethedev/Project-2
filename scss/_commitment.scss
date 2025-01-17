@@ -1,21 +1,35 @@
-@use 'variables';
+@use 'variables' as *;
 
 .commitments {
-    padding: 20px;
+    margin: 0 4rem;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 4rem 21rem;
+    width: auto;
+    height: auto;   
+    overflow: hidden;
 }
 
-.row-1 {
+.grid1, 
+.grid2,
+.grid3,
+.grid4 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: left;
+    align-items: left;
+    padding: 1rem;
+    width: 35rem;
+    height: auto;
+    
 }
 
 .commitments-title {
-    padding-left: 0px;
-    font-size: variables.$font-size-4;
-    font-weight: variables.$font-weight-1;
- //  color: variables.$color-1;
-    width: 300px;
+    font-size: $font-size-4;
+    font-weight: $font-weight-1;
+    line-height: $line-height-3;
 }
 
 .circle-number {
@@ -26,7 +40,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
- //   color: variables.$color-1;
     background-color: transparent;
 }
 
@@ -41,26 +54,17 @@
     opacity: 0.25; 
     z-index: -1; 
     background-color: transparent;
-    border: 2px solid //variables.$color-1;
+    border: 2px solid;
 }
 
 .commit-title {
     text-transform: uppercase;
-    font-size: variables.$font-size-1;
-    font-weight: variables.$font-weight-1;
-//   color: variables.$color-1;
+    font-size: $font-size-1;
+    font-weight: $font-weight-1;
 }
 
 .commit-description {
-    font-size: variables.$font-size-3;
- //   color: variables.$color-1;
-}
-
-.row-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 90px;
+    font-size: $font-size-3;
 }
 
 .commitment-two {
@@ -69,30 +73,25 @@
 }
 
 .get-in-touch-container {
-    float: left;
-    text-align: left;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: 140px;
-    padding-left: 0px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 3;
+}
+
+.get-in-touch-container h2 {
+    font-weight: $font-weight-1;
 }
 
 .get-in-touch-link {
     padding-right: 7px;
-    color: variables.$color-1;
+    color: $color-1;
     text-decoration: none;
-    display: inline-block; 
-    border-bottom: 2px solid variables.$color-1; 
+    border-bottom: 2px solid $color-1; 
     line-height: 0.2; 
     margin-bottom: -1px;
-    font-weight: 100;
 }
 
 .bullet-point {
-    font-size: variables.$font-size-4;
-//    color: variables.$color-1;
+    font-size: $font-size-4;
 }
 
 @media screen and (min-width: 320px) {
@@ -102,9 +101,8 @@
 @media screen and (min-width: 768px){
     .commitments-title {
         padding-left: 20px;
-        font-size: variables.$font-size-2;
-        font-weight: variables.$font-weight-1;
-//        color: variables.$color-1;
+        font-size: $font-size-2;
+        font-weight: $font-weight-1;
         width: 600px;
     }
 
