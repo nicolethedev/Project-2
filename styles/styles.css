@@ -363,6 +363,11 @@ header .navBar {
   width: 100%;
   height: 100vh;
   background-color: #FBF6EE;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 header .navBar .nav-item {
   margin: 16px 0;
@@ -404,13 +409,10 @@ header .dark-mood svg {
     display: block;
   }
   header .navBar {
-    display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
-    position: static;
+    flex-wrap: nowrap;
+    justify-content: center;
     transform: none;
-    list-style: none;
-    z-index: 40;
     background-color: transparent;
   }
   header .navBar a {
