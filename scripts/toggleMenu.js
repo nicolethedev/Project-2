@@ -8,3 +8,11 @@ hamburger.addEventListener("click", () => {
     navBarMenu.classList.toggle("active");
     console.log("here!");
 })
+
+const navList = document.querySelectorAll('.nav-item')
+
+navList.forEach(e =>
+    e.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navBarMenu.classList.remove("active");
+    }));
