@@ -7,7 +7,6 @@ header{
     padding: $padding-1;
     margin: 0;
 
-    
     .logo{
         position: fixed;
         top: 0;
@@ -20,6 +19,35 @@ header{
             height: auto;
         }
     }
+    
+
+    .navBar{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        list-style: none;
+        z-index: 50;
+        width: 100%;
+        height: 100vh;
+        background-color: $color-3;
+        // position: fixed;
+        // left: 0;
+        // top: 0;
+        // transform: translateX(-100%);
+        // transition: transform 0.3s ease-in-out;
+
+        // gap: 0;
+        // transition: 0.2s;
+
+        .nav-item{
+            margin: 16px 0;
+        }
+        &.active{
+            transform: translateX(0);
+            // left: 0;
+        }
+    }
+
     .dark-mood{
         border: none;
         background-color: transparent;
@@ -28,48 +56,16 @@ header{
         right: 0;
         padding: $padding-1;
         z-index: 40;
+        cursor: pointer;
         
         svg{
             width: 20px;
             height: 20px;
-            // fill: $color-1;
         }
         //When the sceen size is smaller than desktop, dark-mood will be hidden.
         display: none;
     }
 
-    .navBar{
-        @extend %flex-nowrap;
-        display: none;  //Hidden by defualt when sceen size is smaller than desktop.
-        z-index: 40;
-
-        a{
-            font-weight: $font-size-1;
-            text-decoration: none;
-            color: $color-1;
-            @extend %flex-nowrap;           
-            margin: 0 2rem;
-            position: relative;
-            //:after pseudo-element here is for having the underline with a smooth transition.
-            &:after{
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 2px;
-                bottom: -2px;
-                left: 0;
-                background-color: $color-1;
-                transition: width 0.2s linear;
-            }
-            &:hover:after{
-                width: 100%;
-            }
-        }
-    }
-
-    .navBar .open{
-        display: block !important;
-    }
     @media (min-width:$tablet){
 
         img{
@@ -78,7 +74,7 @@ header{
         .logo{
             padding: $padding-2;
         }
-    
+        
     } 
     
     @media(min-width:$desktop){
@@ -93,9 +89,44 @@ header{
         .dark-mood{
             display: block;
         }
-        
+        // .navBar{
+        //     display: flex;
+        //     transform: none;
+        // }
         .navBar{
             display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            position: static;
+            transform: none;  //no animation
+            list-style: none;
+            z-index: 40;
+            background-color: transparent;
+            a{
+                font-weight: $font-size-1;
+                text-decoration: none;
+                color: $color-1;
+                display: flex;
+                flex-wrap: nowrap;
+                margin: 0 2rem;
+                position: relative;
+                //:after pseudo-element here is for having the underline with a smooth transition.
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: $color-1;
+                    transition: width 0.2s linear;
+                }
+                &:hover:after{
+                    width: 100%;
+                }
+            }
+
+            // display: none;
         }
     }
         
