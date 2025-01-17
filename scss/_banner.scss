@@ -1,29 +1,27 @@
 @use "variables" as *;
 
 .banner {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 5.5rem;
+  margin-top: 8rem;
   overflow: hidden;
   font-family: $main-font;
   padding: 2rem 4rem;
 
   .banner-text {
     .text-1 {
-      //   display: none;
       width: 200px;
-      margin: 0;
       font-size: $font-size-1;
       font-weight: $font-weight-1;
       line-height: $line-height-1;
     }
-    .text-2 h1 {
-      margin: 0;
-      font-size: $font-size-banner-3;
+
+    .text-2 {
+      margin-top: -1rem;
+      font-weight: $font-weight-1;
       line-height: $line-h-banner-1;
-      font-weight: $font-weight-2;
     }
   }
   .highlighted {
@@ -38,8 +36,9 @@
     height: auto;
 
     .highlighted-image-background {
+
       img {
-        max-width: 96.875rem;
+        max-width: 120rem;
         width: 100%;
         height: auto;
         object-fit: cover;
@@ -47,13 +46,19 @@
         justify-self: center;
       }
     }
+
     .highlighted-image-foreground {
       position: absolute;
+      overflow: hidden;
       width: 15%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 25%;
+      left: 45%;
+      transition: transform .5s ease;
       z-index: 4;
+    }
+
+    .highlighted-image-foreground:hover {
+      transform: scale(1.1);
     }
   }
   .banner-title {
@@ -67,8 +72,8 @@
     font-weight: $font-weight-2;
     margin-top: 0;
     margin-bottom: 140px;
-    max-width: 1100px;
   }
+
   @media (min-width: $tablet) {
     .text-2 {
       font-size: clamp(2.75rem, -8.0726rem + 17.7419vw, 5.5rem);

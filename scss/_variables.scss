@@ -1,5 +1,5 @@
 //Colors for fonts:
-$color-1: #e10e2b;
+$color-1: #F93756;
 $color-2:#f93756;
 $color-3:#FBF6EE;  //font color for red background
 $dark-color:#fbf6ee;  //font color for dark mood
@@ -7,14 +7,15 @@ $dark-color:#fbf6ee;  //font color for dark mood
 //Fonts:
 $main-font: 'Poppins', sans-serif;
 $font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-//Background color in light and dark mood
+
+//Background color in light and dark mood:
 $light-bg-color:#FBF6EE;
 $dark-bg-color:#1b1b2c;
 $red-bg-color: #e10e2b;
 
 //Font weights:
 $font-weight-1: 400;
-$font-weight-2:normal;
+$font-weight-2: 500;
 
 $red-bg-color: #F93756;
 $text-color: #FBF6EE;
@@ -31,15 +32,18 @@ $font-size-banner-2: 40px;
 $font-size-banner-3: 80px;
 
 //Line heights:
-$line-height-1: 1.25rem;
-$line-h-banner-1: 1.25rem;
+$line-height-1: 1.3rem;
+$line-height-2: 2rem;
+$line-height-3: 3rem;
+$line-h-banner-1: 7.5rem;
 $line-h-banner-2: 2.5rem;
 
 //Screen sizes:
+$mobile: 320px;
 $desktop: 1120px;
 $tablet: 976px;
 
-//Paddings 
+//Paddings:
 $padding-1: 1.5rem;   //For logo in desktop.
 $padding-2: 1.875rem;    //For logo in tablet.
 $padding-3: 4rem;

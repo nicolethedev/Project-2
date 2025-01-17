@@ -1,48 +1,50 @@
-@use 'variables';
+@use "variables" as *;
 
 .blog {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(400px,1fr)); 
-    gap: 240px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 10px 10px 170px 60px;
-    width: 100%;
-    max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 10.9rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4rem;
+  width: 100vw;
+  height: auto;
+  max-width: 100%;
 }
 
 .blog-card {
-    overflow: hidden;
-    position: relative;
-    width: auto; 
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  height: auto;
 }
 
 .blog-card img {
-    width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .title {
- //  color: variables.$color-1;
-   font-size: variables.$font-size-1;
-   font-weight: variables.$font-weight-1;
+  font-size: $font-size-1;
+  font-weight: $font-weight-1;
 }
 
 .blog-title {
-   // color: variables.$color-1;
-    font-size: variables.$font-size-4;
-    font-weight: variables.$font-weight-1;
+  margin-top: -0.25rem;
+  font-size: $font-size-4;
+  font-weight: $font-weight-1;
+  line-height: $line-height-2;
 }
 
-@media screen and (min-width: 320px) {
-    .blog {
-        max-width: 100%;
-        align-items: start;
-    }
+@media screen and (min-width: 20rem) {
+  .blog {
+    max-width: 100%;
+    align-items: start;
+  }
 }
-@media screen and (min-width: 768px){
-    .blog {
-        max-width: 1300px;
-        padding: 10px 10px 170px 10px;
-    }
+@media screen and (min-width: 48rem) {
+  .blog {
+    max-width: 81.25rem;
+    padding: 10px 10px 170px 10px;
+  }
 }
