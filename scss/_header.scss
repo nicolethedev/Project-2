@@ -4,7 +4,6 @@ header{
     width: 100vw;
     @include flex-layout;
     position: relative;
-    padding: $padding-1;
     margin: 0;
 
     .logo{
@@ -21,7 +20,7 @@ header{
     }
     
 
-    .navBar{
+    ul.navBar{
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -36,9 +35,6 @@ header{
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
 
-        .nav-item{
-            margin: 16px 0;
-        }
         &.active{
             transform: translateX(0);
         }
@@ -86,23 +82,26 @@ header{
             display: block;
         }
         
-        .navBar{
-            // display: flex;
+        ul.navBar{
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: center;
-            // position: static;
+            justify-content: flex-end;
+            align-items: center;
             transform: none;  //no animation
-            // list-style: none;
-            // z-index: 40;
             background-color: transparent;
-            a{
+            width: 75%;
+            height: 40px;
+            z-index: 39;
+            position: relative;
+            top: 0;
+            li a{
+                font-size: $font-size-1;
                 font-weight: $font-size-1;
                 text-decoration: none;
                 color: $color-1;
                 display: flex;
                 flex-wrap: nowrap;
-                margin: 0 2rem;
+                margin: 0 2.15rem;
                 position: relative;
                 //:after pseudo-element here is for having the underline with a smooth transition.
                 &:after{
