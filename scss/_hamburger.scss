@@ -11,7 +11,7 @@ header{
         position: fixed;
         top: 0;
         right: 0;
-        
+
         .hamburger-content {
             @include flex-layout;
             justify-content: space-between;
@@ -21,11 +21,15 @@ header{
                 font-size: $font-size-1;
                 text-transform: uppercase;
             }
-            svg{
+            .bar{
                 width: 48px;
+                // -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
-        }
-        @media (min-width:$tablet){
+
+            // svg{
+            //     width: 48px;
+            // }
         }
         
         @media (min-width:$desktop){
