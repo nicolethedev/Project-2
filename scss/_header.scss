@@ -4,6 +4,7 @@ header{
     width: 100vw;
     @include flex-layout;
     position: relative;
+    top: 0;
     margin: 0;
 
     .logo{
@@ -20,43 +21,65 @@ header{
     }
     
 
-    ul.navBar{
+    .nav-container{
         display: flex;
         flex-direction: column;
         text-align: left;
-        list-style: none;
-        z-index: 50;
+        z-index: 30;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: $color-3;
         position: fixed;
+        top:0;
         left: 0;
-        top: 0;
-        transform: translateX(-100%);
+        transform: translateX(+100%);
         transition: transform 0.3s ease-in-out;
-
+        padding-top: 5.5rem;
+        ul.navBar{
+            list-style: none;
+        }
+        .nav-item{
+            margin: 8px 0;
+            font-size: $font-size-banner-1;
+            a{
+                text-decoration: none;
+            }
+        }
         &.active{
             transform: translateX(0);
         }
+        .dark-mood{
+            border: none;
+            background-color: transparent;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: $padding-1;
+            z-index: 40;
+            cursor: pointer;
+            
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+            
+        }
+        .out-source{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 2rem;
+            a{
+                display: flex;
+                font-size: $font-size-3;
+                text-decoration: none;
+            }
+            .material-symbols-outlined{
+                width: 10px;
+            }
+        }
     }
 
-    .dark-mood{
-        border: none;
-        background-color: transparent;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: $padding-1;
-        z-index: 40;
-        cursor: pointer;
-        
-        svg{
-            width: 20px;
-            height: 20px;
-        }
-        //When the sceen size is smaller than desktop, dark-mood will be hidden.
-        display: none;
-    }
 
     @media (min-width:$tablet){
 
@@ -81,45 +104,57 @@ header{
         .dark-mood{
             display: block;
         }
-        
-        ul.navBar{
+        .nav-container{
             flex-direction: row;
+            // height: 40px;
             flex-wrap: nowrap;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: center;
             transform: none;  //no animation
             background-color: transparent;
-            width: 75%;
-            height: 40px;
+            // width: 75%;
+            height: 60px;
             z-index: 39;
             position: relative;
-            top: 0;
-            li a{
-                font-size: $font-size-1;
-                font-weight: $font-size-1;
-                text-decoration: none;
-                color: $color-1;
+            top: -30px;
+            ul.navBar{
                 display: flex;
-                flex-wrap: nowrap;
-                margin: 0 2.15rem;
-                position: relative;
-                //:after pseudo-element here is for having the underline with a smooth transition.
-                &:after{
-                    content: '';
-                    position: absolute;
-                    width: 0;
-                    height: 2px;
-                    bottom: -2px;
-                    left: 0;
-                    background-color: $color-1;
-                    transition: width 0.2s linear;
-                }
-                &:hover:after{
-                    width: 100%;
+                margin: 0;
+                padding: 0;
+                
+                li{
+                    font-size: $font-size-1;
+                    font-weight: $font-weight-1;
+                    color: $color-1;
+                    height: 60px;
+                    margin: 0 2.3rem;
+                    //:after pseudo-element here is for having the underline with a smooth transition.
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        bottom: -2px;
+                        left: 0;
+                        background-color: $color-1;
+                        transition: width 0.2s linear;
+                    }
+                    &:hover:after{
+                        width: 100%;
+                    }
                 }
             }
-
-            // display: none;
+            .out-source{
+                display: none;
+            }
+            .dark-mood{
+                // position: fixed;
+                top: 0;
+                right: 0;
+                bottom: auto;
+                left: auto;
+                padding: $padding-2;
+            }
         }
     }
         
