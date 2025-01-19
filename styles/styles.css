@@ -336,6 +336,7 @@ header {
   display: flex;
   flex-wrap: nowrap;
   position: relative;
+  top: 0;
   margin: 0;
 }
 header .logo {
@@ -349,63 +350,61 @@ header .logo img {
   width: 20px;
   height: auto;
 }
-header ul.navBar {
+header .nav-container {
   display: flex;
   flex-direction: column;
   text-align: left;
-  list-style: none;
-  z-index: 50;
+  z-index: 30;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #FBF6EE;
   position: fixed;
-  left: 0;
   top: 0;
-  transform: translateX(-100%);
+  left: 0;
+  transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  padding-top: 5.5rem;
 }
-header ul.navBar.active {
+header .nav-container ul.navBar {
+  list-style: none;
+}
+header .nav-container .nav-item {
+  margin: 8px 0;
+  font-size: 44px;
+}
+header .nav-container .nav-item a {
+  text-decoration: none;
+}
+header .nav-container.active {
   transform: translateX(0);
 }
-header .dark-mood {
+header .nav-container .dark-mood {
   border: none;
   background-color: transparent;
   position: fixed;
-  top: 0;
-  right: 0;
+  bottom: 0;
+  left: 0;
   padding: 1.5rem;
   z-index: 40;
   cursor: pointer;
-  display: none;
 }
-header .dark-mood svg {
+header .nav-container .dark-mood svg {
   width: 20px;
   height: 20px;
 }
-header .navBar {
-  display: none;
-  z-index: 40;
-  display: none;
+header .nav-container .out-source {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
 }
-header .navBar a {
-  font-weight: 14px;
+header .nav-container .out-source a {
+  display: flex;
+  font-size: 18px;
   text-decoration: none;
-  color: #F93756;
-  margin: 0 2rem;
-  position: relative;
 }
-header .navBar a:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #F93756;
-  transition: width 0.2s linear;
-}
-header .navBar a:hover:after {
-  width: 100%;
+header .nav-container .out-source .material-symbols-outlined {
+  width: 10px;
 }
 @media (min-width: 976px) {
   header img {
@@ -425,41 +424,52 @@ header .navBar a:hover:after {
   header .dark-mood {
     display: block;
   }
-  header ul.navBar {
+  header .nav-container {
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     transform: none;
     background-color: transparent;
-    width: 75%;
-    height: 40px;
+    height: 60px;
     z-index: 39;
     position: relative;
-    top: 0;
+    top: -30px;
   }
-  header ul.navBar li a {
-    font-size: 14px;
-    font-weight: 14px;
-    text-decoration: none;
-    color: #e10e2b;
+  header .nav-container ul.navBar {
     display: flex;
-    flex-wrap: nowrap;
-    margin: 0 2.15rem;
-    position: relative;
+    margin: 0;
+    padding: 0;
   }
-  header ul.navBar li a:after {
+  header .nav-container ul.navBar li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #F93756;
+    height: 60px;
+    margin: 0 2.3rem;
+  }
+  header .nav-container ul.navBar li:after {
     content: "";
     position: absolute;
     width: 0;
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #e10e2b;
+    background-color: #F93756;
     transition: width 0.2s linear;
   }
-  header ul.navBar li a:hover:after {
+  header .nav-container ul.navBar li:hover:after {
     width: 100%;
+  }
+  header .nav-container .out-source {
+    display: none;
+  }
+  header .nav-container .dark-mood {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    padding: 1.875rem;
   }
 }
 
@@ -562,7 +572,7 @@ header .hamburger .hamburger-content {
   column-gap: 5px;
   align-items: center;
   padding: 34px;
-  color: #e10e2b;
+  color: #F93756;
   /* Styling for the bottom bar when active */
 }
 header .hamburger .hamburger-content .text {
@@ -576,10 +586,10 @@ header .hamburger .hamburger-content .bars {
   justify-content: space-between;
 }
 header .hamburger .hamburger-content .bar {
-  position: relative; /* Position bars relative to their container */
-  width: 50px; /* Adjust width as needed */
-  height: 1.5px; /* Bar height */
-  background-color: #e10e2b; /* Bar color */
+  position: relative;
+  width: 50px;
+  height: 1.5px;
+  background-color: #F93756;
   transition: all 0.3s ease-in-out;
   z-index: 51;
 }
@@ -590,10 +600,14 @@ header .hamburger .hamburger-content .bar-bottom {
   transition: all 0.3s ease-in-out;
 }
 header .hamburger .hamburger-content.active .bar-top {
-  transform: translateY(8px) rotate(45deg);
+  width: 30px;
+  height: 2px;
+  transform: translateY(3.8px) rotate(45deg);
 }
 header .hamburger .hamburger-content.active .bar-bottom {
-  transform: translateY(-8px) rotate(-45deg);
+  width: 30px;
+  height: 2px;
+  transform: translateY(-3.8px) rotate(-45deg);
 }
 header .hamburger .hamburger-content.active .text {
   visibility: hidden; /* Hide text when hamburger is open */
