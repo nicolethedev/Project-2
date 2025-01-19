@@ -23,11 +23,7 @@ header{
                 font-size: $font-size-1;
                 text-transform: uppercase;
             }
-            // This is setting for svg bar
-            // .bar{
-            //     width: 50px;
-            //     transition: all 0.3s ease-in-out;
-            // }
+            
             .bars{
                 display: flex;
                 flex-direction: column;
@@ -36,10 +32,10 @@ header{
             }
 
             .bar {
-                position: relative; /* Position bars relative to their container */
-                width: 50px; /* Adjust width as needed */
-                height: 1.5px; /* Bar height */
-                background-color: $color-1; /* Bar color */
+                position: relative; 
+                width: 50px; 
+                height: 1.5px; 
+                background-color: $color-1;
                 transition: all 0.3s ease-in-out;
                 z-index: 51;
             }
@@ -54,15 +50,15 @@ header{
         
             
             &.active .bar-top {
-                transform: translateY(8px) rotate(45deg);
-                // position: absolute;
-                // top: 0;
+                width: 30px;
+                height: 2px;
+                transform: translateY(3.8px) rotate(45deg);
             }
 
             &.active .bar-bottom {
-                transform: translateY(-8px) rotate(-45deg);
-                // position: absolute;
-                // top: 0;
+                width: 30px;
+                height: 2px;
+                transform: translateY(-3.8px) rotate(-45deg);
             }
             
             &.active .text {
