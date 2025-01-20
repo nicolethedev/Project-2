@@ -32,6 +32,7 @@ $font-size-banner-1: 44px;
 $font-size-banner-2: 40px;
 $font-size-banner-3: 80px;
 
+
 //Line heights:
 $line-height-1: 1.3rem;
 $line-height-2: 2rem;
@@ -47,17 +48,12 @@ $tablet: 976px;
 //Paddings:
 $padding-1: 1.5rem;   //For logo in desktop.
 $padding-2: 1.875rem;    //For logo in tablet.
+$padding-3: 4rem;
 
-//Created one placeholder: 
-%flex-nowrap{
-    display: flex;
-    flex-wrap: nowrap;
-}
 
 //Created one minmax:
 @mixin flex-layout(){
     display:flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    // align-items: center;
 }
