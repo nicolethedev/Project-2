@@ -612,15 +612,48 @@ header .hamburger .hamburger-content {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 22px;
+  column-gap: 5px;
+  align-items: center;
+  padding: 34px;
   color: #F93756;
+  /* Styling for the bottom bar when active */
 }
 header .hamburger .hamburger-content .text {
   font-size: 14px;
   text-transform: uppercase;
 }
-header .hamburger .hamburger-content svg {
-  width: 48px;
+header .hamburger .hamburger-content .bars {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  justify-content: space-between;
+}
+header .hamburger .hamburger-content .bar {
+  position: relative;
+  width: 50px;
+  height: 1.5px;
+  background-color: #F93756;
+  transition: all 0.3s ease-in-out;
+  z-index: 51;
+}
+header .hamburger .hamburger-content .bar-top {
+  transition: all 0.3s ease-in-out;
+}
+header .hamburger .hamburger-content .bar-bottom {
+  transition: all 0.3s ease-in-out;
+}
+header .hamburger .hamburger-content.active .bar-top {
+  width: 30px;
+  height: 2px;
+  transform: translateY(3.8px) rotate(45deg);
+}
+header .hamburger .hamburger-content.active .bar-bottom {
+  width: 30px;
+  height: 2px;
+  transform: translateY(-3.8px) rotate(-45deg);
+}
+header .hamburger .hamburger-content.active .text {
+  visibility: hidden; /* Hide text when hamburger is open */
 }
 @media (min-width: 1120px) {
   header .hamburger {
@@ -951,7 +984,7 @@ body {
   background-color: #FBF6EE;
   font-family: "Poppins", sans-serif;
   color: #F93756;
-  width: 100%;
+  width: 100vw;
   max-width: 120rem;
   margin: 0;
   padding: 0;
