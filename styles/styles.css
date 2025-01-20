@@ -984,7 +984,7 @@ body {
   background-color: #FBF6EE;
   font-family: "Poppins", sans-serif;
   color: #F93756;
-  width: 100%;
+  width: 100vw;
   max-width: 120rem;
   margin: 0;
   padding: 0;
