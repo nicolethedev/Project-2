@@ -434,7 +434,7 @@ header .nav-container .out-source .material-symbols-outlined {
     height: 60px;
     z-index: 39;
     position: relative;
-    top: -30px;
+    top: -50px;
   }
   header .nav-container ul.navBar {
     display: flex;
@@ -442,10 +442,10 @@ header .nav-container .out-source .material-symbols-outlined {
     padding: 0;
   }
   header .nav-container ul.navBar li {
+    position: relative;
     font-size: 14px;
     font-weight: 400;
     color: #F93756;
-    height: 60px;
     margin: 0 2.3rem;
   }
   header .nav-container ul.navBar li:after {
