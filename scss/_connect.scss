@@ -2,18 +2,22 @@
 
 .connect {
     background-color: $red-bg-color;
-    font-family: Poppins, sans-serif;
+    font-family: $main-font;
     padding: 1rem 4rem;
-    color: #fff;
+    color: $color-3;
     width: 100%;
     max-width: 125rem;
+}
+
+.connect-title {
+    font-size: $font-size-6;
 }
 
 .connect table {
     width: 100%;
     border-collapse: collapse;
     border-top: .5px solid $text-color;
-    font-size: 25px;
+    font-size: $font-size-5;
 }
 
 .connect table tr, 
@@ -39,8 +43,14 @@
 }
 
 .connect .arrow {
-    fill: #fff;
-    stroke: #fff;
+    fill: $color-3;
+    stroke: $color-3;
     float: right;
     
+}
+
+@media (min-width: $tablet) {
+    .connect-title {
+        font-size: $font-size-2;
+    }
 }
