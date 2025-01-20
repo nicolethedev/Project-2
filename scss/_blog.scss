@@ -3,13 +3,14 @@
 .blog {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  gap: 10.9rem;
+  gap: 8rem;
   justify-content: center;
   align-items: center;
-  margin: 0 4rem;
-  width: 100vw;
+  margin: 0 1rem;
+  width: 100%;
   height: auto;
   max-width: 100%;
+  padding-bottom: 6rem;
 }
 
 .blog-card {
@@ -36,15 +37,23 @@
   line-height: $line-height-2;
 }
 
-@media screen and (min-width: 20rem) {
+@media (min-width: $tablet) {
   .blog {
+    grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     align-items: start;
+    padding: 0 2rem;
   }
 }
-@media screen and (min-width: 48rem) {
+
+@media (min-width: $desktop) {
   .blog {
-    max-width: 81.25rem;
-    padding: 10px 10px 170px 10px;
+    max-width: 120rem;
+    padding-bottom: 5rem;
+  }
+
+  .blog-card {
+    width: 100%;
+    height: auto;
   }
 }

@@ -14,6 +14,8 @@
 }
 
 html {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -22,9 +24,10 @@ body {
   font-family: $main-font;
   //font color is added here for dark/light mood icon to be able to work. In some files the color is overwriting , which needs to be removed.
   color: $color-1;
-  width: 100vw;
+  width: 100%;
   max-width: 120rem;
   margin: 0;
+  padding: 0;
 
   svg {
     fill: $color-1;
@@ -38,9 +41,9 @@ body {
 
 main {
   margin-left: -2rem;
-  margin-right: -2rem;
+  margin-right: -1rem;
   border-collapse: collapse;
-  padding: 0 2.5rem;
+  padding: 0 3rem;
 }
 
 .red-bg {
@@ -48,5 +51,8 @@ main {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: auto;
   margin: inherit;
+  right: 0;
+  left: 0;
 }
