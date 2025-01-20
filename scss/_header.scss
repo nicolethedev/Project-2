@@ -116,17 +116,18 @@ header{
             height: 60px;
             z-index: 39;
             position: relative;
-            top: -30px;
+            top: -50px;
             ul.navBar{
                 display: flex;
                 margin: 0;
                 padding: 0;
                 
                 li{
+                    position: relative;
                     font-size: $font-size-1;
                     font-weight: $font-weight-1;
                     color: $color-1;
-                    height: 60px;
+                    // height: 60px;
                     margin: 0 2.3rem;
                     //:after pseudo-element here is for having the underline with a smooth transition.
                     &:after{
