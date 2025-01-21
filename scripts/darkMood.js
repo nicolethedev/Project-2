@@ -15,6 +15,8 @@ const awards = document.querySelector('.awards');
 const connect = document.querySelector('.connect');
 const footer = document.querySelector('.footer');
 
+const logoSvg = document.querySelector('.logo svg');
+
 
 
 // console.log('HERE!');
@@ -33,7 +35,7 @@ let mood='light';
 
 //Function:
 darkMood.addEventListener('click',changeMood);
-console.log('Inside the darkMood file!');
+// console.log('Inside the darkMood file!');
 
 function changeMood(){
     
@@ -49,7 +51,8 @@ function changeMood(){
         ourSources.forEach(source=>{ source.style.color=darkFont});
         viewService.style.setProperty('color',darkFont,'important');
         viewServiceLine.style.setProperty('border-bottom-color',darkFont,'important');
-
+        logoSvg.style.setProperty('fill', darkFont, 'important');
+        
         getInTouch.style.setProperty('color',darkFont,'important');
         getInTouch.style.setProperty('border-bottom-color',darkFont,'important');
         serviceBullet.forEach(bullet => { bullet.style.setProperty('color', bulletC, 'important'); });
@@ -66,6 +69,8 @@ function changeMood(){
         document.body.style.setProperty('color', lightFont, 'important'); 
         navContainer.style.backgroundColor=lightBg;
         ourSources.forEach(source=>{ source.style.color=lightFont});
+
+        logoSvg.style.setProperty('fill', lightFont, 'important');
 
         darkMoodSvg.style.setProperty('fill', lightFont, 'important');
         hamburgerText.style.setProperty('color',lightFont,'important');
