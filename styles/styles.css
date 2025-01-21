@@ -486,7 +486,7 @@ header.red-mood .logo .cls-1 {
     height: 60px;
     z-index: 39;
     position: relative;
-    top: -50px;
+    top: -88px;
   }
   header .nav-container ul.navBar {
     display: flex;
@@ -498,7 +498,7 @@ header.red-mood .logo .cls-1 {
     font-size: 14px;
     font-weight: 400;
     color: #F93756;
-    margin: 0 2.3rem;
+    margin: 0 2rem;
   }
   header .nav-container ul.navBar li:after {
     content: "";
