@@ -536,6 +536,7 @@ header.red-mood .logo .cls-1 {
   padding: 2rem 2rem;
 }
 .banner .banner-text .text-1 {
+  display: none;
   width: 200px;
   font-size: 14px;
   font-weight: 400;
