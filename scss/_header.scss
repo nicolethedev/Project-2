@@ -18,10 +18,9 @@ header{
         svg{
             width:20px ;
             height: auto;
-        }
-        .cls-1{
             fill: $color-1;
         }
+        
     }
     
 
@@ -88,22 +87,13 @@ header{
         .dark-mood svg{
             fill: $color-3;
         }
-        .logo .cls-1{
+        .logo svg{
             fill: $color-3;
         }
     }
-    // &.default-mood{
-    //     .dark-mood svg{
-    //         color: $color-1;
-    //     }
-    // }
-
-
+    
     @media (min-width:$tablet){
 
-        img{
-            width: 28px;
-        }
         .logo{
             padding: $padding-2;
         }

@@ -392,8 +392,6 @@ header .logo {
 header .logo svg {
   width: 20px;
   height: auto;
-}
-header .logo .cls-1 {
   fill: #F93756;
 }
 header .nav-container {
@@ -455,13 +453,10 @@ header .nav-container .out-source .material-symbols-outlined {
 header.red-mood .dark-mood svg {
   fill: #FBF6EE;
 }
-header.red-mood .logo .cls-1 {
+header.red-mood .logo svg {
   fill: #FBF6EE;
 }
 @media (min-width: 976px) {
-  header img {
-    width: 28px;
-  }
   header .logo {
     padding: 1.875rem;
   }
