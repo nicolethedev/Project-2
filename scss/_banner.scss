@@ -12,6 +12,7 @@
 
   .banner-text {
     .text-1 {
+      display: none;
       width: 200px;
       font-size: $font-size-1;
       font-weight: $font-weight-1;
@@ -77,6 +78,7 @@
   }
 
   @media (min-width: $tablet) {
+  
     .text-2 {
       font-size: clamp(2.75rem, -8.0726rem + 17.7419vw, 5.5rem);
       font-weight: 300;
