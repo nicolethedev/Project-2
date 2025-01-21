@@ -8,15 +8,19 @@ header{
     margin: 0;
 
     .logo{
+        display: inline-block;
         position: fixed;
         top: 0;
         left: 0;
         padding:$padding-2;
         z-index: 40;
 
-        img{
-            width: 20px;
+        svg{
+            width:20px ;
             height: auto;
+        }
+        .cls-1{
+            fill: $color-1;
         }
     }
     
@@ -78,7 +82,21 @@ header{
                 width: 10px;
             }
         }
+
     }
+    &.red-mood{
+        .dark-mood svg{
+            fill: $color-3;
+        }
+        .logo .cls-1{
+            fill: $color-3;
+        }
+    }
+    // &.default-mood{
+    //     .dark-mood svg{
+    //         color: $color-1;
+    //     }
+    // }
 
 
     @media (min-width:$tablet){
