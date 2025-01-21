@@ -18,7 +18,8 @@ header{
             column-gap:5px;
             align-items: center;
             padding: 34px;
-            color: $color-1;        
+            color: $color-1;  
+            
             .text{
                 font-size: $font-size-1;
                 text-transform: uppercase;
@@ -29,24 +30,16 @@ header{
                 flex-direction: column;
                 row-gap: 5px;
                 justify-content: space-between;
+
+                .bar {
+                    position: relative; 
+                    width: 50px; 
+                    height: 1.5px; 
+                    background-color: $color-1;
+                    z-index: 51;
+                }
             }
 
-            .bar {
-                position: relative; 
-                width: 50px; 
-                height: 1.5px; 
-                background-color: $color-1;
-                transition: all 0.3s ease-in-out;
-                z-index: 51;
-            }
-            .bar-top {
-                transition: all 0.3s ease-in-out;
-            }
-        
-              /* Styling for the bottom bar when active */
-            .bar-bottom {
-                transition: all 0.3s ease-in-out;
-            }
         
             
             &.active .bar-top {
@@ -63,6 +56,17 @@ header{
             
             &.active .text {
                 visibility: hidden; /* Hide text when hamburger is open */
+            }
+        }
+
+        // Styles when the red background is active
+        &.red-mood {
+            .hamburger-content{
+                color: $color-3; // Color for red background (e.g., white)
+            }
+
+            .bars .bar {
+                background-color: $color-3; // Color for red background (e.g., white)
             }
         }
 
