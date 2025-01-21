@@ -1,0 +1,56 @@
+@use 'variables' as *;
+
+.connect {
+    background-color: $red-bg-color;
+    font-family: $main-font;
+    padding: 2rem 3rem 3rem 2rem;
+    color: $color-3;
+    width: 100%;
+    max-width: 125rem;
+}
+
+.connect-title {
+    font-size: $font-size-6;
+}
+
+.connect table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: .5px solid $text-color;
+    font-size: $font-size-5;
+}
+
+.connect table tr, 
+.connect table td {
+    border-top: .5px solid $text-color;
+    border-bottom: .5px solid $text-color;
+    border-spacing: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.connect table tr .social, .connect table tr .arrow {
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.connect table tr .social:hover {
+    transform: translateX(75px);
+}
+
+.connect table tr .arrow:hover {
+    transform: translateX(-100px);
+}
+
+.connect .arrow {
+    fill: $color-3;
+    stroke: $color-3;
+    float: right;
+    
+}
+
+@media (min-width: $tablet) {
+    .connect-title {
+        font-size: $font-size-2;
+    }
+}

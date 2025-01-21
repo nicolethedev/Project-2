@@ -11,22 +11,65 @@ header{
         position: fixed;
         top: 0;
         right: 0;
-        
+
         .hamburger-content {
             @include flex-layout;
             justify-content: space-between;
-            padding: 22px;
-            color: $color-1;        
+            column-gap:5px;
+            align-items: center;
+            padding: 34px;
+            color: $color-1;  
+            
             .text{
                 font-size: $font-size-1;
                 text-transform: uppercase;
             }
-            svg{
-                width: 48px;
+            
+            .bars{
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+                justify-content: space-between;
+
+                .bar {
+                    position: relative; 
+                    width: 50px; 
+                    height: 1.5px; 
+                    background-color: $color-1;
+                    z-index: 51;
+                }
+            }
+
+        
+            
+            &.active .bar-top {
+                width: 30px;
+                height: 2px;
+                transform: translateY(3.8px) rotate(45deg);
+            }
+
+            &.active .bar-bottom {
+                width: 30px;
+                height: 2px;
+                transform: translateY(-3.8px) rotate(-45deg);
+            }
+            
+            &.active .text {
+                visibility: hidden; /* Hide text when hamburger is open */
             }
         }
-        @media (min-width:$tablet){
+
+        // Styles when the red background is active
+        &.red-mood {
+            .hamburger-content{
+                color: $color-3; // Color for red background (e.g., white)
+            }
+
+            .bars .bar {
+                background-color: $color-3; // Color for red background (e.g., white)
+            }
         }
+
         
         @media (min-width:$desktop){
             display: none;

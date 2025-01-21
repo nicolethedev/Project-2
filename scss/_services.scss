@@ -1,176 +1,162 @@
-@use 'variables';
+@use 'variables' as *;
 
 hr {
     border: none;
-    height: 0.8px;
+    height: 0.05rem;
     opacity: 30%;
-    background-color: variables.$color-1;
-    width: 320px;
-    padding-left: 250px;
+    background-color: $color-1;
+    width: 85vw;
+    padding-left: 2rem;
 }
 
 .services {
-    padding-top: 0px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-self: start;
+    margin: 0 2rem;
+    width: 100%;
+    height: auto;
+    overflow: visible;
 }
 
 .services-title {
-    width: 700px;
-    padding-left: 20px;
-    font-size: variables.$font-size-2;
-    font-weight: variables.$font-weight-1;
-    color: variables.$color-1;
+    width: fit-content;
+    font-size: $font-size-6;
+    font-weight: $font-weight-2;
 }
 
 .services-right {
-    width: 500px;
-    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 85%;
+    overflow: visible;
 }
 
 .services-description {
-    font-size: variables.$font-size-3;
-    color: variables.$color-1;
-    padding-bottom: 40px;
-    width: 300px;
+    font-size: $font-size-3;
+    padding-bottom: 5rem;
+    width: 100%;
     text-align: left;
+    overflow: visible;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .service-one {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    padding-bottom: 2rem;
+
 }
 
 .service-two {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    padding-bottom: 2rem;
+
 }
 
 .service-three {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 50px;
+    width: 100%;
+    padding-bottom: 3.125rem;
 }
 
-.service-three h2 {
-    width: 300px;
+.small-number, 
+.service-type {
+    display: inline-block;
 }
 
 .small-number {
-    padding-right: 20px;
-    color: variables.$color-1;
+    padding-right: 1.25rem;
 }
 
 .service-type {
-    font-weight: variables.$font-weight-1;
-    color: variables.$color-1;
-}
-
-.view-services {
-    color: variables.$color-1;
+    font-weight: $font-weight-1;
+    font-size: $font-size-3;
+    width: 90%;
 }
 
 .services-link {
     display: flex;
     align-items: center;
-    padding: 0px 0px 160px 20px;
 }
 
-.services-link a {
-    padding-right: 7px;
+.services-link h2 {
+    color: $color-1;
+    padding-right: .4375rem;
     text-decoration: none;
     display: inline-block; 
-    border-bottom: 2px solid variables.$color-1; 
-    line-height: 0.2; 
-    margin-bottom: -1px;
-    font-weight: 100;
+    border-bottom: .175rem solid $color-1; 
+    font-weight: 400;
 }
 
 .services-link .bullet-point {
-    color: variables.$color-1;
-    font-size: variables.$font-size-4;
-}
-
-.services-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 0px 40px 40px;
-    width: 320px;
+    font-size: $font-size-4;
 }
 
 .services-image img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 320px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    width: 100vw;
+    height: auto;
 }
 
 .line-1,
 .line-2,
 .line-3 {
     border: none;
-    height: 0.8px;
-    opacity: 30%;
-    background-color: variables.$color-1;
-    width: 370px;
-    padding-left: 250px;
+    height: .05rem;
+    opacity: 20%;
+    width: 85vw; 
 }
 
-@media screen and (min-width: 320px) {
-    .services {
-        flex-direction: column;
-    }
-
-    hr {
-        padding: 0px;
-        width: 1200px;
-    }
-}
-
-@media screen and (min-width: 768px){
+@media (min-width: $tablet) {
     .services {
         flex-direction: row;
-    }
-
-    hr {
-        padding: 0px;
-        width: 1200px;
+        justify-content: space-between;
+        padding: 1rem 2rem;
     }
 
     .services-right {
-        padding-top: 25px;
-    }
-
-    .service-three h2 {
-        width: 100%;
-    }
-
-    .services-image {
-        width: 1300px;
-    }
-
-    .services-image img {
-        width: 1300px;
-        padding-top: 40px;
+        width: 50%;
     }
 
     .services-description {
-        font-size: variables.$font-size-5;
-        width: 550px;
-        padding-left: 0px;
-        text-align: left;
+        width: 90%;
     }
 
-    .services-title {
-        padding-left: 50px;
+    .service-one,
+    .service-two,
+    .service-three {
+        width: 100%;
     }
 
-    .services-link {
-        padding-bottom: 160px;
+    .services-image img {
+        width: 100vw;
     }
-} 
+
+    .service-type {
+        width: 90%;
+        font-size: $font-size-4;
+    }
+
+    .line-1,
+    .line-2,
+    .line-3 {
+        width: 75%;
+    }
+}

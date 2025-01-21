@@ -1,0 +1,235 @@
+@use "variables" as *;
+
+footer {
+  background-color: $red-bg-color;
+  font-family: $main-font;
+  color: $color-3;
+  display: flex;
+  width: 100vw;
+  height: auto;
+  padding: 2rem 3rem 3rem 2rem;
+  margin-bottom: -3rem;
+  flex-direction: column;
+
+  footer a {
+    color: $color-3;
+  }
+
+  footer a:visited,
+  footer a:hover {
+    color: $color-3;
+  }
+
+  .left-text{
+    width: 50%;
+    font-weight: $font-weight-1;
+    margin-bottom: 2rem;
+  }
+
+  .left-text h2,
+  .left-text a {
+    font-weight: $font-weight-1;
+  }
+
+  table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .left-text a, 
+  .right-text a, 
+  .copy-right a {
+    color: $color-3;
+  }
+
+  .left-text a:hover,
+  .right-text a:hover,
+  .copy-right a:hover {
+    color: $color-3;
+  }
+
+  .right-text a, 
+  .copy-right a {
+    text-decoration: none;
+  }
+
+  .copy-right {
+    padding-top: 2rem;
+    width: 45%;
+  }
+
+  .arrow {
+    fill: $color-3;
+    stroke: $color-3;
+  } 
+}
+
+@media (min-width: $tablet) {
+  footer {
+    background-color: $red-bg-color;
+    font-family: $main-font;
+    font-weight: 300;
+    padding: 2rem 4rem;
+    color: $color-3;
+    border-collapse: collapse;
+  
+    footer a {
+      color: $color-3;
+    }
+  
+    footer a:visited {
+      color: $color-3;
+    }
+  
+    table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    table a {
+      font-size: 1.1rem;
+      font-weight: $font-weight-2;
+    }
+  
+    th,
+    td {
+      padding: 4px 10px;
+      text-align: left;
+    }
+  
+    tr {
+      padding-right: 10px;
+    }
+  
+    .left-text {
+      position: absolute;
+      font-size: 2rem;
+      width: 35%;
+      display: inline-block;
+    }
+  
+    .left-text h2,
+    .left-text a {
+      font-weight: 300;
+      line-height: 1.1;
+      text-decoration-thickness: 0.2rem;
+      color: $color-3;
+    }
+  
+    .right-text {
+      padding-top: 2rem;
+      width: 50%;
+      padding-left: 4rem;
+      margin-left: 50%;
+      position: relative;
+      float: right;
+    }
+  
+    .right-text a {
+      text-decoration: none;
+      color: $color-3;
+      font-weight: 300;
+    }
+  
+    .left-text a:hover,
+    .right-text a:hover {
+      color: $color-3;
+    }
+  
+    .copy-right {
+      font-size: $font-size-1;
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+      width: 100%;
+    }
+  
+    .copy-right a {
+      color: $color-3;
+    }
+  
+    .copy-right a:hover {
+      color: $color-3;
+    }
+  
+    .arrow {
+      fill: $color-3;
+      stroke: $color-3;
+    } 
+  
+  }
+}
+
+
+@media (min-width: $desktop) {
+  footer {
+    background-color: $red-bg-color;
+    font-family: $main-font;
+    font-weight: 300;
+    padding: 2rem .01rem 2rem 2rem;
+    color: $color-3;
+    border-collapse: collapse;
+
+      footer a {
+        color: $color-3;
+      }
+
+      footer a:visited {
+        color: $color-3;
+      }
+
+      .left-text {
+        font-size: 2rem;
+        width: 30%;
+        display: inline-block;
+      }
+
+      .left-text h2,
+      .left-text a {
+        font-weight: 300;
+        line-height: 1.1;
+        text-decoration-thickness: 0.2rem;
+        color: $color-3;
+      }
+
+      .right-text {
+        padding-top: 2rem;
+        width: 50%;
+        padding-left: 4rem;
+        position: relative;
+        float: right;
+      }
+
+      .right-text a {
+        text-decoration: none;
+        color: $color-3;
+        font-weight: 300;
+      }
+
+      .left-text a:hover,
+      .right-text a:hover {
+        color: $color-3;
+      }
+
+      .copy-right {
+        font-size: $font-size-1;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        width: 100%;
+      }
+
+      .copy-right a {
+        color: $color-3;
+      }
+
+      .copy-right a:hover {
+        color: $color-3;
+      }
+
+      .arrow {
+        fill: $color-3;
+        stroke: $color-3;
+      } 
+  }
+}

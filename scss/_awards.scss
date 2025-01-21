@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+.awards{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    font-family: $main-font;
+    background-color: $red-bg-color;
+    width: 100%;
+    height: auto;
+    padding: 2rem 3rem 0 2rem;
+    max-width: 125rem;
+}
+
+.awards-image {
+    max-width: 96.875rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.awards-title, tr, td, .connect-title {
+    color: $text-color;
+}
+
+.awards-title, .connect-title {
+    line-height: $line-height-3;
+    font-size: $font-size-6;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.awards-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.awards table tr, 
+.awards table td {
+    border-top: .5px solid $text-color;
+    border-spacing: 0;
+    padding-top: .75rem;
+    padding-bottom: 3rem;
+}
+
+.awards table td:first-child {
+    font-size: $font-size-1;
+}
+
+.awards table td:nth-child(2) {
+    font-size: $font-size-3;
+    width: 50%;
+}
+
+.awards table td:last-child {
+    font-weight: 800;
+    font-size: $font-size-4;
+    float: right;
+    border-top: none;
+}
+
+@media (min-width: $tablet) {
+    .awards-title {
+        font-size: $font-size-2;
+    }
+
+    .awards-image {
+        padding-top: 3rem;
+    }
+}
