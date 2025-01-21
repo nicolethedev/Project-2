@@ -382,19 +382,15 @@ header {
   margin: 0;
 }
 header .logo {
-  display: inline-block;
   position: fixed;
   top: 0;
   left: 0;
   padding: 1.875rem;
   z-index: 40;
 }
-header .logo svg {
+header .logo img {
   width: 20px;
   height: auto;
-}
-header .logo .cls-1 {
-  fill: #F93756;
 }
 header .nav-container {
   display: flex;
@@ -451,12 +447,6 @@ header .nav-container .out-source a {
 }
 header .nav-container .out-source .material-symbols-outlined {
   width: 10px;
-}
-header.red-mood .dark-mood svg {
-  fill: #FBF6EE;
-}
-header.red-mood .logo .cls-1 {
-  fill: #FBF6EE;
 }
 @media (min-width: 976px) {
   header img {
@@ -634,6 +624,7 @@ header .hamburger .hamburger-content {
   align-items: center;
   padding: 34px;
   color: #F93756;
+  /* Styling for the bottom bar when active */
 }
 header .hamburger .hamburger-content .text {
   font-size: 14px;
@@ -645,12 +636,19 @@ header .hamburger .hamburger-content .bars {
   row-gap: 5px;
   justify-content: space-between;
 }
-header .hamburger .hamburger-content .bars .bar {
+header .hamburger .hamburger-content .bar {
   position: relative;
   width: 50px;
   height: 1.5px;
   background-color: #F93756;
+  transition: all 0.3s ease-in-out;
   z-index: 51;
+}
+header .hamburger .hamburger-content .bar-top {
+  transition: all 0.3s ease-in-out;
+}
+header .hamburger .hamburger-content .bar-bottom {
+  transition: all 0.3s ease-in-out;
 }
 header .hamburger .hamburger-content.active .bar-top {
   width: 30px;
@@ -664,12 +662,6 @@ header .hamburger .hamburger-content.active .bar-bottom {
 }
 header .hamburger .hamburger-content.active .text {
   visibility: hidden; /* Hide text when hamburger is open */
-}
-header .hamburger.red-mood .hamburger-content {
-  color: #FBF6EE;
-}
-header .hamburger.red-mood .bars .bar {
-  background-color: #FBF6EE;
 }
 @media (min-width: 1120px) {
   header .hamburger {
