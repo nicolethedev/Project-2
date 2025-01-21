@@ -8,7 +8,7 @@
     background-color: $red-bg-color;
     width: 100%;
     height: auto;
-    padding: 4rem 4rem 2rem 4rem;
+    padding: 2rem 3rem 0 2rem;
     max-width: 125rem;
 }
 
@@ -63,5 +63,9 @@
 @media (min-width: $tablet) {
     .awards-title {
         font-size: $font-size-2;
+    }
+
+    .awards-image {
+        padding-top: 3rem;
     }
 }
